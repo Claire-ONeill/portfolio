@@ -1,25 +1,40 @@
+<script>
+import NavBar from "../components/NavBar.vue";
+import ParallaxBackground from "../components/ParallaxBackground.vue";
+import Hero from "../components/Hero.vue";
+import AboutSection from "../components/AboutSection.vue";
+import ProjectCarousel from "../components/ProjectCarousel.vue";
+import ContactForm from "../components/ContactForm.vue";
+
+export default {
+  components: {
+    NavBar,
+    ParallaxBackground,
+    Hero,
+    AboutSection,
+    ProjectCarousel,
+    ContactForm,
+  },
+};
+</script>
+
 <template>
   <div class="home">
-    <h1>Hello World</h1>
+    <NavBar />
+    <ParallaxBackground />
+    <Hero />
+    <AboutSection />
+    <ProjectCarousel />
+    <ContactForm />
   </div>
 </template>
-
-<script setup>
-</script>
 
 <style scoped>
 .home {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-h1 {
-  font-size: 3rem;
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
+  background: var(--bg-dark);
+  color: var(--text-primary);
 }
 </style>
